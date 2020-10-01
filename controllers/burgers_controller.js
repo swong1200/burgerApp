@@ -5,7 +5,7 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 // Routes
-router.get("/", function(req, res) {
+router.get("/index", function(req, res) {
     burger.all(function(data) {
       let hbsObject = {
         burgers: data
@@ -27,7 +27,7 @@ router.get("/", function(req, res) {
   });
 
   router.put("/api/burgers/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
+    let condition = "id = " + req.params.id;
   
     console.log("condition", condition);
   
