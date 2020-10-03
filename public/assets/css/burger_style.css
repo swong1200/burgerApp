@@ -1,3 +1,9 @@
+body {
+    background-color: black;
+}
+h1 {
+    color: white;
+}
 .burgerMain {
     max-width: 10%;
     max-height: auto;
@@ -7,6 +13,8 @@
   }
 .create-form {
     margin-top: 15px;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 .devoured {
     display: grid;
