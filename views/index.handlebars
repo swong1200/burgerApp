@@ -1,44 +1,55 @@
 <div class="text-center">
-  <img src="../public/assets/img/bu.jpg" alt="Juicy Burger">
+  <img class="burgerMain" src="https://github.com/swong1200/burgerApp/blob/master/public/assets/img/bu.jpg?raw=true"
+    alt="Juicy Burger">
   <h1>Eat-Da-Burger!</h1>
 </div>
 
 
 <div class="row">
-  <div class="container col-md-6">
+
+  <div class="container col-sm-4">
     <ul class="list-group">
       {{#each burgers}}
       {{#unless devoured}}
-      <div class="list-group-item">
-        <p>
-        {{burger_name}}
-        </p>
-        <button class="devourBurger" data-id="{{id}}">Devour It!</button>
+      <div class="list-group-item devoured">
+        <div>
+          <p>
+            {{burger_name}}
+          </p>
+        </div>
+        <div>
+          <button class="devourBurger btn btn-outline-secondary" data-id="{{id}}">Devour It!</button>
+        </div>
       </div>
+
+
       {{/unless}}
       {{/each}}
     </ul>
   </div>
-  
 
-  <div class="container col-md-6">
+  <div class="container col-sm-4">
     <ul class="list-group">
       {{#each burgers}}
       {{#if devoured}}
       <div class="list-group-item">
-      <p>
-        {{burger_name}}
-      </p>
+        <p>
+          {{burger_name}}
+        </p>
       </div>
       {{/if}}
       {{/each}}
     </ul>
   </div>
+
 </div>
 
-<form class="create-form">
+
+
+<form class="create-form text-center">
   <div class="form-group">
     <input type="text" id="input" name="burger_name">
   </div>
+  <p>Enter a burger you want to eat.</p>
   <button type="submit">Add Burger</button>
 </form>
