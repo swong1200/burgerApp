@@ -10,7 +10,7 @@ router.get("/index", function(req, res) {
       let hbsObject = {
         burgers: data
       };
-      console.log(hbsObject);
+      // console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
@@ -21,9 +21,9 @@ router.get("/index", function(req, res) {
     ], [
       req.body.burger_name, req.body.devoured
     ], function(result) {
-      // Send back the ID of the new quote
+      // Send back the ID of the new burger
       res.json({ id: result.insertId });
-      console.log(result)
+      console.log(req.body)
     });
   });
 
